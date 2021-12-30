@@ -12,34 +12,55 @@ using System.IO;
 public class CardsManager : MonoBehaviour
 {
     [SerializeField] private GameObject cardPrefab;
-    private Galery galery;
 
     private void Start()
     {
-        galery = JSONManager.ReadJson();
         GenerateView();
     }
 
-    private void GenerateView()
+    public void GenerateView()
     {
-        foreach (var card in galery.item_list)
+        YovaUtilities.ClearChildren(transform);
+        foreach (var card in GameManager.instance.galery.item_list)
         {
-            AddACardToView(card);
+            switch (GameManager.instance.currentCategory)
+            {
+                case GameManager.Categories.All:
+                    AddACardToView(card);
+                    break;
+                case GameManager.Categories.Image:
+                    if(card.category == "image")
+                    {
+                        AddACardToView(card);
+                    }
+                    break;
+                case GameManager.Categories.ThreeD:
+                    if (card.category == "3D")
+                    {
+                        AddACardToView(card);
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     private void AddACardToView(CardData cardData)
     {
         GameObject newCard = Instantiate(cardPrefab, transform);
+
+
+
         newCard.name = cardData.name;
         newCard.transform.Find("Title").GetComponent<TMP_Text>().text = cardData.name;
-        newCard.transform.Find("Subtitle").GetComponent<TMP_Text>().text = cardData.categorie;
+        newCard.transform.Find("Subtitle").GetComponent<TMP_Text>().text = cardData.category;
         GameObject previewPic = YovaUtilities.FindChildrenWithTag(newCard, "PreviewPic")[0];
 
         
 
-        if (cardData.categorie == "image")
-        {
+        /*if (cardData.categorie == "image")
+        {*/
             string path = Path.Combine(Application.streamingAssetsPath, "pictures/" + cardData.asset_name);
             Debug.Log("path " + path);
             if (File.Exists(path))
@@ -58,8 +79,7 @@ public class CardsManager : MonoBehaviour
                 Destroy(previewPic);
             }
 
-        }
-
-
+        //}
     }
+
 }

@@ -13,7 +13,7 @@ using UnityEngine;
 public class CardData
 {
     public string name;
-    public string categorie;
+    public string category;
     public string asset_name;
 }
 
@@ -46,6 +46,15 @@ public class JSONManager
             }
         }
         return newGalery;
+
+    }
+
+    public static void WriteJson()
+    {
+        string json = JsonUtility.ToJson(GameManager.instance.galery);
+
+        string path = Path.Combine(Application.streamingAssetsPath, "saved_galery/galery.json");
+        File.WriteAllText(path, json);
 
     }
 

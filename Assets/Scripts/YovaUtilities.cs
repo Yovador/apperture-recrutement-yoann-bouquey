@@ -5,7 +5,7 @@ using UnityEngine;
 
 // Sometimes I create Method that are usefull in every project, so I put them here
 // I'm maybe going to put it on github one day or the other
-public class YovaUtilities
+public class YovaUtilities : MonoBehaviour
 {
 
     //Method that return a list of GameObject which are the direct or indirect Child of 'obj' and have the tag 'tag'
@@ -79,5 +79,30 @@ public class YovaUtilities
             normalizedArray[i] = array[i] / value;
         }
         return normalizedArray;
+    }
+
+    //Destroy all children of a Transform
+    public static void ClearChildren(Transform transform)
+    {
+        Debug.Log(transform.childCount);
+        int i = 0;
+
+        //Array to hold all child obj
+        GameObject[] allChildren = new GameObject[transform.childCount];
+
+        //Find all child obj and store to that array
+        foreach (Transform child in transform)
+        {
+            allChildren[i] = child.gameObject;
+            i += 1;
+        }
+
+        //Now destroy them
+        foreach (GameObject child in allChildren)
+        {
+            Destroy(child.gameObject);
+        }
+
+        Debug.Log(transform.childCount);
     }
 }
