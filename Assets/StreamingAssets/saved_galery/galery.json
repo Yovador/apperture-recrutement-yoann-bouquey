@@ -3,23 +3,23 @@
 
         {
             "name" : "1st entry",
-            "categories" : "images",
-            "assets_name" : "visuel1.png"
+            "categorie" : "image",
+            "asset_name" : "visuel1.png"
         },
         {
             "name" : "2st entry",
-            "categories" : "images",
-            "assets_name" : "visuel1.png"
+            "categorie" : "image",
+            "asset_name" : "visuel2.png"
         },
         {
             "name" : "3st entry",
-            "categories" : "images",
-            "assets_name" : "visuel1.png"
+            "categorie" : "image",
+            "asset_name" : "visuel3.png"
         },
         {
             "name" : "4st entry",
-            "categories" : "images",
-            "assets_name" : "visuel1.png"
+            "categorie" : "image",
+            "asset_name" : "visuel4.png"
         }
     ]
 
