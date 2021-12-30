@@ -7,6 +7,11 @@ TagManager:
   - PreviewPic
   - Cards
   - AddWindow
+  - InputField
+  - DeleteWindow
+  - DeleteElement
+  - DeleteEntryButton
+  - PictoDelete
   layers:
   - Default
   - TransparentFX

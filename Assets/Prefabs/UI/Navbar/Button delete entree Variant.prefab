@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1497027710753611148
+--- !u!1001 &596955905692137550
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -38,10 +38,10 @@ PrefabInstance:
     - target: {fileID: 6907855698871096926, guid: 70a970a9ceeb1174db1de7081de4a3fa, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8c80af45dba327643a1ed20e0c93d4e8, type: 3}
+      objectReference: {fileID: 21300000, guid: 0d0a26a90ae58a04bb809645c045d84e, type: 3}
     - target: {fileID: 6907855699056466008, guid: 70a970a9ceeb1174db1de7081de4a3fa, type: 3}
       propertyPath: m_text
-      value: "Ajouter entr\xE9e 3D"
+      value: "Supprimer une entr\xE9e"
       objectReference: {fileID: 0}
     - target: {fileID: 6907855699056466009, guid: 70a970a9ceeb1174db1de7081de4a3fa, type: 3}
       propertyPath: m_AnchorMax.y
@@ -66,6 +66,10 @@ PrefabInstance:
     - target: {fileID: 6907855699056466009, guid: 70a970a9ceeb1174db1de7081de4a3fa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907855699916215492, guid: 70a970a9ceeb1174db1de7081de4a3fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeleteEntry
       objectReference: {fileID: 0}
     - target: {fileID: 6907855699916215493, guid: 70a970a9ceeb1174db1de7081de4a3fa, type: 3}
       propertyPath: m_Pivot.x
@@ -153,7 +157,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6907855699916215494, guid: 70a970a9ceeb1174db1de7081de4a3fa, type: 3}
       propertyPath: m_Name
-      value: Button add 3d
+      value: Button delete entree Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907855699916215494, guid: 70a970a9ceeb1174db1de7081de4a3fa, type: 3}
+      propertyPath: m_TagString
+      value: DeleteEntryButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70a970a9ceeb1174db1de7081de4a3fa, type: 3}

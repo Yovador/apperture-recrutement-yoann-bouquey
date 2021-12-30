@@ -18,10 +18,18 @@ public class CategoriesButton : RedButton
     private void Awake()
     {
         imageComponent = gameObject.GetComponent<Image>();
+        Debug.Log(imageComponent);
         buttonComponent = gameObject.GetComponent<Button>();
+        Debug.Log(buttonComponent);
+
         textComponent = gameObject.GetComponentInChildren<TMP_Text>();
+        Debug.Log(textComponent);
+
         backgroundColor = imageComponent.color;
+        Debug.Log(backgroundColor);
+
         textColor = textComponent.color;
+        Debug.Log(textColor);
 
     }
 
