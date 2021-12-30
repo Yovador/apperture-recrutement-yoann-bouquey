@@ -1,0 +1,26 @@
+{
+    "item_list" : [
+
+        {
+            "name" : "1st entry",
+            "categories" : "images",
+            "assets_name" : "visuel1.png"
+        },
+        {
+            "name" : "2st entry",
+            "categories" : "images",
+            "assets_name" : "visuel1.png"
+        },
+        {
+            "name" : "3st entry",
+            "categories" : "images",
+            "assets_name" : "visuel1.png"
+        },
+        {
+            "name" : "4st entry",
+            "categories" : "images",
+            "assets_name" : "visuel1.png"
+        }
+    ]
+
+}
